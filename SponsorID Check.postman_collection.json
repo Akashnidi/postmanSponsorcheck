@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "d3bde12d-324b-4b67-8477-2112e7233265",
+		"name": "SponsorID Check",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42346386"
+	},
+	"item": [
+		{
+			"name": "Check Sponsor ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log(\"Sponsor ID:\", pm.environment.get(\"sponsorID\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/{{sponsorID}}",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"{{sponsorID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
